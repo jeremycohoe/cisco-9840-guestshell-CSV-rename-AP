@@ -1,12 +1,12 @@
 import csv
 import re
 
-#Fucntion to add . in mac address to get the default AP name
+#Function to add . in MAC address to get the default AP name
 def f_dot(my_str, group=4, char='.'):
      my_str = str(my_str)
      return char.join(my_str[i:i+group] for i in range(0, len(my_str), group))
 
-# Fucntion to clean the mac address to a consistent format
+# Function to set the MAC address to a consistent format
 def f_clean_mac_format(my_str):
      my_str = str(my_str)
      my_str = re.sub('[:.-]', '', my_str)
@@ -17,6 +17,7 @@ def f_add_quotes(my_str):
      my_str = str(my_str)     	 
      return str2+my_str+str2
 
+# Rename AP based off of CSV values
 with open('input.csv') as f:
     reader = csv.reader(f)
     with open('output.txt', 'w') as g:
