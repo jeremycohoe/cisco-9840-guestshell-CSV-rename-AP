@@ -17,7 +17,7 @@ def f_add_quotes(my_str):
      my_str = str(my_str)     	 
      return str2+my_str+str2
 
-with open('Input.csv') as f:
+with open('input.csv') as f:
     reader = csv.reader(f)
     with open('output.txt', 'w') as g:
         writer = csv.writer(g)
